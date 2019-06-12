@@ -75,7 +75,7 @@
                             throw new Error("Somethin went wrong on api server!");
                         }
                     }).then(response => {
-                        realdownloadurlEle.value = response;
+                        realdownloadurlEle.value = response.url;
                     }).catch(error => {
                         console.log(error);
                     });
