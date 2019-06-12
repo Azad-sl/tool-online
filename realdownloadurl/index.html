@@ -64,7 +64,7 @@
             }
             if (targetfileEle.value) {
                 var request = new Request(
-                    `http://self.zhangchaocloud.com:7001/privateurl?baseurl=${baseurl}&key=${targetfileEle.value}&deadline=${deadline}`, {
+                    `https://self.zhangchaocloud.com:7001/privateurl?baseurl=${baseurl}&key=${targetfileEle.value}&deadline=${deadline}`, {
                         method: "GET"
                     });
                 fetch(request)
