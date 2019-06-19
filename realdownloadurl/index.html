@@ -45,7 +45,8 @@
             <label for="realdownloadurl">
                 访问地址：
             </label>
-            <input name="realdownloadurl" type="text" readonly />
+            <input name="realdownloadurl" type="text" readonly /><input name="targetfile" type="text" /><button
+                onclick="copyToClipboard()">复制</button>
         </div>
     </div>
 
@@ -79,6 +80,12 @@
                     }).catch(error => {
                         console.log(error);
                     });
+            }
+        }
+
+        function copyToClipboard() {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(realdownloadurlEle.value);
             }
         }
     </script>
